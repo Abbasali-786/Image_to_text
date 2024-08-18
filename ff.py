@@ -8,7 +8,7 @@ st.title("Image Caption Generator")
 st.write("This app generates captions for an image using the BLIP model by Salesforce.")
 
 # Hugging Face Token Input
-hf_token = "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"
+hf_token = st.secrets["hf_token"]
 
 # Load the Processor and Model
 try:
@@ -48,4 +48,3 @@ if st.button("Generate Caption"):
             st.error(f"Error processing the image: {e}")
     else:
         st.warning("Please upload an image.")
-st.write["Devloped by Ghulam Abbas"]
